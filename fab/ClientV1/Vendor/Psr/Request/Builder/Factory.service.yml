@@ -1,0 +1,7 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Vendor\Psr\Request\Builder\FactoryInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Vendor\Psr\Request\Builder\Factory
+    public: false
+    shared: true
+    calls:
+      - [setClientV1VendorPsrRequestBuilder, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Vendor\Psr\Request\BuilderInterface']]

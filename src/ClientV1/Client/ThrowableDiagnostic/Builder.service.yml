@@ -1,0 +1,7 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Client\ThrowableDiagnostic\BuilderInterface:
+    class: Neighborhoods\ThrowableDiagnosticComponent\ThrowableDiagnosticV1\ThrowableDiagnostic\Builder
+    calls:
+      - [ setThrowableDiagnosticV1ThrowableDiagnosticFactory, [ '@Neighborhoods\ThrowableDiagnosticComponent\ThrowableDiagnosticV1\ThrowableDiagnostic\FactoryInterface' ] ]
+      - [ addFactory, [ '@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Client\ThrowableDiagnostic\Decorator\FactoryInterface' ] ]
+      - [ addFactory, [ '@Neighborhoods\ThrowableDiagnosticComponent\ThrowableDiagnosticV1Decorators\GuzzleV1\GuzzleDecorator\FactoryInterface' ] ]

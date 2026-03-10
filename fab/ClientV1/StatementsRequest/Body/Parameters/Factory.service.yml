@@ -1,0 +1,7 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\Parameters\FactoryInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\Parameters\Factory
+    public: false
+    shared: true
+    calls:
+      - [setClientV1StatementsRequestBodyParameters, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\ParametersInterface']]

@@ -1,0 +1,5 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\FetchResultInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\FetchResult
+    public: false
+    shared: false

@@ -1,0 +1,7 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\SubmissionResult\FactoryInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\SubmissionResult\Factory
+    public: false
+    shared: true
+    calls:
+      - [setSingleStatementClientV1SubmissionResult, ['@Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\SubmissionResultInterface']]

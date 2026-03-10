@@ -1,0 +1,11 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ClientInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Client
+    public: false
+    shared: true
+    calls:
+      - [setClientV1ResultSetBuilderFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\Builder\FactoryInterface']]
+      - [setClientV1StatementsRequestHeadersFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Headers\FactoryInterface']]
+      - [setClientV1VendorGuzzleHttpClientFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Vendor\GuzzleHttp\Client\FactoryInterface']]
+      - [setClientV1VendorPsrRequestBuilderFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Vendor\Psr\Request\Builder\FactoryInterface']]
+      - [setThrowableDiagnosticV1ThrowableDiagnosticBuilderFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Client\ThrowableDiagnostic\Builder\FactoryInterface']]

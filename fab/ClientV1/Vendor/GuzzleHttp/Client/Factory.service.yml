@@ -1,0 +1,7 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Vendor\GuzzleHttp\Client\FactoryInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Vendor\GuzzleHttp\Client\Factory
+    public: false
+    shared: true
+    calls:
+      - [setClientV1VendorGuzzleHttpClient, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Vendor\GuzzleHttp\ClientInterface']]

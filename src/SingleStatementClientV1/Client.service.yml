@@ -1,0 +1,13 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\ClientInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\Client
+    public: false
+    shared: true
+    calls:
+      - [setClientV1Client, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ClientInterface']]
+      - [setClientV1StatementsRequestBodyBindVariableMapBuilderFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\BindVariable\Map\Builder\FactoryInterface']]
+      - [setClientV1StatementsRequestBodyFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\FactoryInterface']]
+      - [setClientV1StatementsRequestFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\FactoryInterface']]
+      - [setClientV1StatementsRequestQueryParametersFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\QueryParameters\FactoryInterface']]
+      - [setSingleStatementClientV1FetchResultBuilderFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\FetchResult\Builder\FactoryInterface']]
+      - [setSingleStatementClientV1SubmissionResultBuilderFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\SubmissionResult\Builder\FactoryInterface']]

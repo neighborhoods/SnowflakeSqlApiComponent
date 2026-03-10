@@ -1,0 +1,11 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\BuilderInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\Builder
+    public: false
+    shared: false
+    calls:
+      - [setClientV1ResultSetFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\FactoryInterface']]
+      - [setClientV1ResultSetResultSetMetaDataBuilderFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\ResultSetMetaData\Builder\FactoryInterface']]
+      - [setClientV1ResultSetStatsBuilderFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\Stats\Builder\FactoryInterface']]
+
+

@@ -1,0 +1,62 @@
+{
+  "name": "neighborhoods/snowflake-sql-api-component",
+  "description": "A Client Component for Snowflake SQL API.",
+  "minimum-stability": "stable",
+  "keywords": [
+    "snowflake",
+    "snowflake-sql",
+    "snowflake-api",
+    "snowflake-sql-api",
+    "client",
+    "sdk"
+  ],
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Hrvoje Jukic",
+      "email": "hrcajuka@gmail.com"
+    }
+  ],
+  "bin": [
+    "bin/single_statement_client_v1_connection_test"
+  ],
+  "require": {
+    "ext-json": "*",
+    "ext-openssl": "*",
+    "php": "^7.3|^8",
+    "guzzlehttp/guzzle": "^6|^7",
+    "neighborhoods/throwable-diagnostic-component": "^4"
+  },
+  "require-dev": {
+    "neighborhoods/buphalo": "^1.6",
+    "neighborhoods/dependency-injection-container-builder": "^1.1",
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^2.1",
+    "phpstan/phpstan-phpunit": "^2",
+    "phpunit/phpunit": "^9.2",
+    "squizlabs/php_codesniffer": "^4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Neighborhoods\\SnowflakeSqlApiComponent\\": [
+        "src",
+        "fab"
+      ]
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Neighborhoods\\SnowflakeSqlApiComponent\\Tests\\": ["tests"]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    },
+    "sort-packages": true
+  },
+  "scripts": {
+    "test": "phpunit tests",
+    "lint": "phpstan analyse && phpcs"
+  }
+}

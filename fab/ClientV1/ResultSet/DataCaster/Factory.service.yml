@@ -1,0 +1,7 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\DataCaster\FactoryInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\DataCaster\Factory
+    public: false
+    shared: true
+    calls:
+      - [setClientV1ResultSetDataCaster, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\DataCasterInterface']]
