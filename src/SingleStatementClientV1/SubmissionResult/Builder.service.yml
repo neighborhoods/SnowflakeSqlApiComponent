@@ -1,0 +1,8 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\SubmissionResult\BuilderInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\SubmissionResult\Builder
+    public: false
+    shared: false
+    calls:
+      - [setSingleStatementClientV1SubmissionResultFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\SubmissionResult\FactoryInterface']]
+      - [setClientV1ResultSetDataCasterFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\DataCaster\FactoryInterface']]

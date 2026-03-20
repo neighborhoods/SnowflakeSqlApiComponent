@@ -1,0 +1,5 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\QueryParametersInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\QueryParameters
+    public: false
+    shared: false

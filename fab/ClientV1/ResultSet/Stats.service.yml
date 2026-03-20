@@ -1,0 +1,5 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\StatsInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\Stats
+    public: false
+    shared: false

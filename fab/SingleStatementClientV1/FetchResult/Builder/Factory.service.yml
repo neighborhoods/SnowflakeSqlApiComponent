@@ -1,0 +1,7 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\FetchResult\Builder\FactoryInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\FetchResult\Builder\Factory
+    public: false
+    shared: true
+    calls:
+      - [setSingleStatementClientV1FetchResultBuilder, ['@Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\FetchResult\BuilderInterface']]

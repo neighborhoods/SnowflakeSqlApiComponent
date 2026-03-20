@@ -1,0 +1,5 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\SubmissionResultInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\SubmissionResult
+    public: false
+    shared: false

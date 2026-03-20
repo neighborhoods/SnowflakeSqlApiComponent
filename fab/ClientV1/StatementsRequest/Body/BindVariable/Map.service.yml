@@ -1,0 +1,5 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\BindVariable\MapInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\BindVariable\Map
+    public: false
+    shared: false

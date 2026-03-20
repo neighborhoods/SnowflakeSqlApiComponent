@@ -1,0 +1,7 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Headers\FactoryInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Headers\Factory
+    public: false
+    shared: true
+    calls:
+      - [setClientV1StatementsRequestHeaders, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\HeadersInterface']]

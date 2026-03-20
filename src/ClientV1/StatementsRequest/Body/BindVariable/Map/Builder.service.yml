@@ -1,0 +1,8 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\BindVariable\Map\BuilderInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\BindVariable\Map\Builder
+    public: false
+    shared: false
+    calls:
+      - [setClientV1StatementsRequestBodyBindVariableMapFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\BindVariable\Map\FactoryInterface']]
+      - [setClientV1StatementsRequestBodyBindVariableBuilderFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\BindVariable\Builder\FactoryInterface']]

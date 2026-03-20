@@ -1,0 +1,7 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\ResultSetMetaData\PartitionInfo\Map\Builder\FactoryInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\ResultSetMetaData\PartitionInfo\Map\Builder\Factory
+    public: false
+    shared: true
+    calls:
+      - [setClientV1ResultSetResultSetMetaDataPartitionInfoMapBuilder, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\ResultSetMetaData\PartitionInfo\Map\BuilderInterface']]

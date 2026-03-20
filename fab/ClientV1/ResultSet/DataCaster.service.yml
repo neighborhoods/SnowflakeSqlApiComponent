@@ -1,0 +1,5 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\DataCasterInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\DataCaster
+    public: false
+    shared: false

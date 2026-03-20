@@ -1,0 +1,7 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Client\ThrowableDiagnostic\Decorator\FactoryInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Client\ThrowableDiagnostic\Decorator\Factory
+    public: false
+    shared: true
+    calls:
+      - [setThrowableDiagnosticV1ThrowableDiagnosticDecorator, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Client\ThrowableDiagnostic\DecoratorInterface']]

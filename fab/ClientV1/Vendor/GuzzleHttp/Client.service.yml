@@ -1,0 +1,5 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Vendor\GuzzleHttp\ClientInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Vendor\GuzzleHttp\Client
+    public: false
+    shared: false

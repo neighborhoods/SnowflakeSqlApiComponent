@@ -1,0 +1,9 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\HeadersInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Headers
+    public: false
+    shared: false
+    calls:
+      - [setUserAgent, ['NeighborhoodsSnowflakeSqlApiComponent/ClientV1 (PHP)']]
+      - [setContentType, ['application/json']]
+      - [setAccept, ['application/json']]

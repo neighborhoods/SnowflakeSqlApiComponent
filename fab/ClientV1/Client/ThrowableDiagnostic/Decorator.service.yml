@@ -1,0 +1,5 @@
+services:
+  Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Client\ThrowableDiagnostic\DecoratorInterface:
+    class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Client\ThrowableDiagnostic\Decorator
+    public: false
+    shared: false
