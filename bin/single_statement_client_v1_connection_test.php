@@ -5,11 +5,11 @@ declare(strict_types=1);
 ini_set('assert.exception', '1');
 error_reporting(E_ALL);
 
-if (file_exists($autoloaderFilePath = dirname(__DIR__, 4) . '/autoload.php')) {
+if (file_exists($autoloaderFilePath = dirname(__DIR__, 3) . '/autoload.php')) {
     /** @noinspection PhpIncludeInspection */
     require_once $autoloaderFilePath;
     $rootPath = realpath(dirname(__DIR__, 4));
-    $componentPath = 'vendor/neighborhoods/snowfalke-sql-api-component';
+    $componentPath = 'vendor/neighborhoods/snowflake-sql-api-component';
 } elseif (file_exists($autoloaderFilePath = dirname(__DIR__, 1) . '/vendor/autoload.php')) {
     /** @noinspection PhpIncludeInspection */
     require_once $autoloaderFilePath;
