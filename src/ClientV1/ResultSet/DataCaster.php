@@ -39,7 +39,7 @@ class DataCaster implements DataCasterInterface
         }
         switch ($columnType->getType()) {
             case 'boolean':
-                return (bool)$columnValue;
+                return filter_var($columnValue, FILTER_VALIDATE_BOOLEAN);
             case 'fixed':
                 if ($columnType->getScale() === 0) {
                     return (int)$columnValue;
