@@ -11,5 +11,5 @@ interface BuilderInterface
 {
     public function build(): SubmissionResultInterface;
 
-    public function setClientV1ResultSet(ResultSetInterface $resultSet): BuilderInterface;
+    public function setClientV1ResultSet(ResultSetInterface $resultSet);
 }
