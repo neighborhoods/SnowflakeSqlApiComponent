@@ -2,7 +2,7 @@ services:
   Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\ClientInterface:
     class: Neighborhoods\SnowflakeSqlApiComponent\SingleStatementClientV1\Client
     public: false
-    shared: true
+    shared: false
     calls:
       - [setClientV1Client, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ClientInterface']]
       - [setClientV1StatementsRequestBodyBindVariableMapBuilderFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Body\BindVariable\Map\Builder\FactoryInterface']]
