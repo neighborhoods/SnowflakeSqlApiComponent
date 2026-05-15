@@ -2,7 +2,7 @@ services:
   Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ClientInterface:
     class: Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Client
     public: false
-    shared: true
+    shared: false
     calls:
       - [setClientV1ResultSetBuilderFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\ResultSet\Builder\FactoryInterface']]
       - [setClientV1StatementsRequestHeadersFactory, ['@Neighborhoods\SnowflakeSqlApiComponent\ClientV1\StatementsRequest\Headers\FactoryInterface']]

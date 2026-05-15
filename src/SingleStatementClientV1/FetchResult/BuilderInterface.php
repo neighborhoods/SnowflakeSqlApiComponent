@@ -12,9 +12,9 @@ interface BuilderInterface
 {
     public function build(): FetchResultInterface;
 
-    public function setClientV1ResultSet(ResultSetInterface $resultSet): BuilderInterface;
+    public function setClientV1ResultSet(ResultSetInterface $resultSet);
 
     public function setClientV1ResultSetResultSetMetaData(
         ResultSetMetaDataInterface $resultSetMetaData
-    ): BuilderInterface;
+    );
 }
