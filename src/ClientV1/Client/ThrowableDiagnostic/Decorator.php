@@ -7,7 +7,7 @@ namespace Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Client\ThrowableDiagno
 use Neighborhoods\SnowflakeSqlApiComponent\ClientV1\Exception\UnauthorizedException;
 use Neighborhoods\ThrowableDiagnosticComponent\ThrowableDiagnosticV1\ThrowableDiagnostic;
 use Neighborhoods\ThrowableDiagnosticComponent\ThrowableDiagnosticV1\ThrowableDiagnosticInterface;
-use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Exception\BadResponseException;
 use Throwable;
 
 final class Decorator implements DecoratorInterface
@@ -16,14 +16,11 @@ final class Decorator implements DecoratorInterface
 
     public function diagnose(Throwable $throwable): ThrowableDiagnosticInterface
     {
-        if ($throwable instanceof RequestException) {
-            if ($throwable->getResponse() === null) {
-                throw $throwable;
-            }
-            $contents = (string)$throwable->getResponse()->getBody()->getContents();
-
+        if ($throwable instanceof BadResponseException) {
+            $response = $throwable->getResponse();
             //If its an auth error convert to an auth exception
-            if ($throwable->getResponse()->getStatusCode() === 401) {
+            if ($response->getStatusCode() === 401) {
+                $contents = (string)$response->getBody()->getContents();
                 $errors = json_decode($contents, true);
                 throw new UnauthorizedException($errors['message'], (int)$errors['code']);
             }
